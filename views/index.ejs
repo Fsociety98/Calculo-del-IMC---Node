@@ -1,0 +1,36 @@
+<%- include layouts/header.ejs %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= title %></h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <form action="/calcular" method="POST">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="exampleInputPeso">Peso</label>
+          <input type="text" class="form-control" id="exampleInputPeso" name="peso">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="exampleInputAltura">Altura</label>
+          <input type="text" class="form-control" id="exampleInputAltura" name="altura">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Calcular</button>
+    </div>
+  </form>
+  <label>Su IMC es de: <%= masa %></label>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <img src="/images/IMC.png" alt="IMC">
+    </div>
+  </div>
+</div>
+<%- include layouts/footer.ejs %>
